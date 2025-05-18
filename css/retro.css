@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;  
+}
+
+/* Caja principal */
+.caja {
+    height: 87vh; /* Altura de 97% del viewport */
+	background-image: url('../images/diño.jpg'); /* Cambia por tu imagen */
+            background-size: cover; /* Cubre toda la pantalla */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Fija la imagen al desplazarse */
+            background-position: center; /* Centra la imagen */
+            margin: 0;
+            
+    display: flex; /* Usamos Flexbox para alinear el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa el texto y la imagen */
+    padding: 0 40px; /* Espacio interno a los lados */
+}
+
+/* Contenedor de texto */
+.textopor {
+    color: white; /* Color del texto */
+    max-width: 50%; /* Ancho máximo del texto */
+	font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+/* Título */
+.textopor h1 {
+    font-size: 110px; /* Tamaño del título */
+    margin: 0 0 10px 0; /* Margen inferior */
+}
+
+/* Subtítulo */
+.textopor p {
+    font-size: 18px; /* Tamaño normal */
+    font-weight: 400; /* Peso normal */
+    margin: 0; /* Sin margen */
+}
+
+
+/* Estilos de la imagen */
+.imagenpor img {
+    max-width: 900px; /* La imagen no excede el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+
+
+
+.cuerpo{background-image:url('../images/fondo.jpg');
+        background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+        background-position: center; /* Centra la imagen */}
+		
+.mostrador {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+            gap: 20px; /* Espacio entre elementos */
+            padding: 20px; /* Espaciado interno */
+            max-width: 1200px; /* Ancho máximo del mostrador */
+            width: 100%; /* Ocupa el 100% del ancho disponible */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+        }
+
+        /* Estilos de cada producto */
+.producto {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Asegura que el zoom no se salga del contenedor */
+}
+
+.main-image, .hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambiado a "cover" para que la imagen llene el contenedor */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Transición para opacity y transform */
+    transform-origin: center center; /* El zoom se aplica desde el centro */
+}
+
+.hover-image {
+    opacity: 0;
+    transform: scale(1); /* Escala inicial (sin zoom) */
+}
+
+.image-container:hover .main-image {
+    opacity: 0;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+    transform: scale(1.1); /* Escala final (zoom) */
+}
+
+.info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    margin: 0;
+    color: #555;
+    font-weight: bold;
+}
+
+.info button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+	width:100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info button:hover {
+    background-color: red;
+}

@@ -1,0 +1,311 @@
+a {
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+body{ 
+     margin: 0;
+     padding: 0;
+	 /*background: linear-gradient(to right, #deca5c,#deca5c, #fcee77);*/
+	 background-image:url('../images/fondorugoso.jpg');
+}
+
+
+		
+.nombredelequipo{
+            display: flex; /* Utiliza flexbox para alinear elementos */
+            align-items: center; /* Alinea verticalmente al centro */
+			margin-left:170px;
+        }
+        .image {
+            width: 100px; /* Ancho de la imagen */
+            height:100px; /* Alto de la imagen */
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+
+       @font-face {
+    font-family: 'Jaini';
+    src: url('../fuente/Jaini-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.texto14 {
+    font-family: 'Jaini', sans-serif;
+    font-size: 70px; /* Tamaño de la fuente */
+    color: #714404; /* Color del texto */
+}		 
+			
+
+
+
+section{background-color:rgb(250, 243, 222, 0.4);
+		 padding:10px;
+		 float:left;
+		 width:350px;
+		 height:440px;
+		 border:1px solid #b78304;
+		 margin-bottom:10px;
+		 margin-left:20px;
+		 margin-top:50px;
+		 
+		 }
+
+/* Estilos para el contenedor de la imagen grande */
+        .large-image-container {
+            width: 250px; /* Ancho del contenedor */
+            height: 250px; /* Alto del contenedor */
+            overflow: hidden; /* Oculta el exceso de la imagen */
+            position: relative;
+            margin: 0 auto; /* Centra el contenedor */
+            border: 1px solid #b78304; /* Borde para visualizar el contenedor */
+        }
+
+        /* Estilos para la imagen grande */
+        .large-image {
+            width: 100%; /* La imagen ocupa todo el contenedor */
+            height: 100%;
+			cursor:pointer;
+            transition: transform 0.1s ease; /* Suaviza la animación */
+        }
+
+        /* Estilos para la lupa */
+        .lupa {
+            width: 50px; /* Tamaño de la lupa (más grande) */
+            height: 50px;
+            /*border: 2px solid #b78304;  Borde de la lupa */
+            border-radius: 50%; /* Forma circular */
+            position: absolute;
+            /*background: rgba(255, 255, 255, 0.3);  Fondo semi-transparente */
+            pointer-events: none; /* Evita que la lupa interfiera con el mouse */
+            display: none; /* Oculta la lupa por defecto */
+        }
+
+        /* Estilos para las miniaturas */
+        .imgpeque {
+            display: flex; /* Activa Flexbox */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            gap: 20px; /* Espacio entre las imágenes */
+            margin-top: 20px;
+        }
+
+        .thumbnail2 {
+            width: 100px; /* Tamaño de las imágenes pequeñas */
+            cursor: pointer;
+            border: 1px solid #b78304;
+        }
+
+        /* Estilos para el texto descriptivo */
+        .description {
+            text-align: justify;
+            font-family: "Jaini", system-ui;
+            font-size: 40px; /* Tamaño de la fuente del texto descriptivo */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 1px; /* Espacio debajo del texto */
+            color: #714404; /* Color del texto */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+		
+
+.medio{
+         text-align:justify;
+		 padding:10px;
+		 float:right;
+		 height:500px;
+		 width:850px;
+		 /*border:1px solid #b2c9c8;*/
+		 margin-bottom:10px;
+
+		 }
+
+.product-details2 {
+            background-color:; /* Fondo blanco para el contenedor del producto */
+            padding: 40px; /* Espacio interno dentro del contenedor */
+            border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+            width: 350px; /* Ancho máximo del contenedor */
+            float: left; /* Permite que el contenedor flote a la izquierda */
+            margin: 10px; /* Margen alrededor del contenedor */
+        }
+
+        .price, .tallas, .quantity {
+            font-size: 18px; /* Tamaño de fuente para el precio, tallas y cantidad */
+            margin: 10px 0; /* Margen vertical para separar los elementos */
+        }
+
+        select, input[type="number"] {
+            width: 100%; /* Hace que los selectores y entradas ocupen todo el ancho del contenedor */
+            padding: 10px; /* Espacio interno dentro de los selectores y entradas */
+            border: 1px solid #ccc; /* Borde gris claro alrededor de los selectores y entradas */
+            border-radius: 4px; /* Bordes redondeados para los selectores y entradas */
+            margin-bottom: 20px; /* Margen inferior para separar de otros elementos */
+        }
+
+        /* Comentar o eliminar las siguientes líneas para que aparezcan las flechas */
+        input[type="number"] {
+            /* -moz-appearance: textfield; */ /* Elimina los botones de incremento/decremento en Firefox */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button, 
+        input[type="number"]::-webkit-outer-spin-button {
+            /* -webkit-appearance: none;  /* Elimina los botones de incremento/decremento en Chrome y Safari */
+            /* margin: 0; */ /* Elimina margen alrededor de los botones eliminados */
+        }
+
+        .total {
+            margin-top: 5px;
+            font-weight: bold;
+			margin-bottom:30px;
+        }
+
+
+.tabla2{float:right;
+       background-color:;
+	   padding:10px;
+	   border-radius:10px;}
+.tablaa {
+	
+            width:380px;
+            border-collapse: collapse;
+            margin: 20px auto;
+			background-color:white;
+        }
+        th, td {
+            border: 1px solid #b78304;
+            padding: 10px;
+            
+        }
+		
+
+
+
+
+		
+
+/*este es el boton que estadentro de personalizar*/
+button{background-color:white;
+  border:solid 3px black;
+  color:white;
+  padding:15px 32px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:left;
+border-radius: 10px;}
+
+
+
+
+
+
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centrar el modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 400px; /* Ancho fijo del modal */
+	height:450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Ancho del input */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+
+
+/*este boton es para retro*/
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(245, 152, 18, 0.9);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #f78520;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
+

@@ -1,0 +1,324 @@
+body{background-image:white; 
+     margin: 0;
+     padding: 0;}
+
+
+		
+.nombredelequipo{
+            display: flex; /* Utiliza flexbox para alinear elementos */
+            align-items: center; /* Alinea verticalmente al centro */
+			margin-left:170px;
+        }
+        .image {
+            width: 50px; /* Ancho de la imagen */
+            height: 50px; /* Alto de la imagen */
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+		.texto14 {
+            font-size: 30px; /* Tamaño de la fuente */
+            color: black; /* Color del texto */
+            font-family: Arial, sans-serif; /* Tipo de fuente */
+        }
+		
+
+
+
+section{background-color:white;
+         text-align:justify;
+		 line-height:1.2;
+		 font-size: 20px;
+		 padding:10px;
+		 float:left;
+		 width:380px;
+		 height:500px;
+		 border:1px solid #b2c9c8;
+		 margin-bottom:10px;
+		 margin-left:20px;
+		 
+		 }
+.thumbnail2 {
+            width: 100px; /* Tamaño de las imágenes pequeñas */
+            cursor: pointer;
+            margin: 5px;
+			
+			border:1px solid #b2c9c8;
+        }
+        .large-image {
+            width: 200px; /* Tamaño de la imagen grande */
+            height: auto;
+			display: block;
+           margin-left: auto;
+           margin-right: auto;
+		   margin-bottom:10px;
+        }
+        .description {
+            font-size: 30px; /* Tamaño de la fuente del texto descriptivo */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 1px; /* Espacio debajo del texto */
+			color:black; /*color del texto*/
+			text-align:center;
+			margin-bottom:10px;
+        }
+		
+
+.medio{background-color:white;
+         text-align:justify;
+		 padding:10px;
+		 float:right;
+		 height:500px;
+		 width:850px;
+		 /*border:1px solid #b2c9c8;*/
+		 margin-bottom:10px;
+
+		 }
+
+.product-details2 {
+            background-color: white; /* Fondo blanco para el contenedor del producto */
+            padding: 40px; /* Espacio interno dentro del contenedor */
+            border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+            width: 350px; /* Ancho máximo del contenedor */
+            float: left; /* Permite que el contenedor flote a la izquierda */
+            margin: 10px; /* Margen alrededor del contenedor */
+        }
+
+        .price, .tallas, .quantity {
+            font-size: 18px; /* Tamaño de fuente para el precio, tallas y cantidad */
+            margin: 10px 0; /* Margen vertical para separar los elementos */
+        }
+
+        select, input[type="number"] {
+            width: 100%; /* Hace que los selectores y entradas ocupen todo el ancho del contenedor */
+            padding: 10px; /* Espacio interno dentro de los selectores y entradas */
+            border: 1px solid #ccc; /* Borde gris claro alrededor de los selectores y entradas */
+            border-radius: 4px; /* Bordes redondeados para los selectores y entradas */
+            margin-bottom: 20px; /* Margen inferior para separar de otros elementos */
+        }
+
+        /* Comentar o eliminar las siguientes líneas para que aparezcan las flechas */
+        input[type="number"] {
+            /* -moz-appearance: textfield; */ /* Elimina los botones de incremento/decremento en Firefox */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button, 
+        input[type="number"]::-webkit-outer-spin-button {
+            /* -webkit-appearance: none;  /* Elimina los botones de incremento/decremento en Chrome y Safari */
+            /* margin: 0; */ /* Elimina margen alrededor de los botones eliminados */
+        }
+
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+
+.tabla2{float:right;
+       background-color:white;
+	   padding:10px;
+	   border-radius:10px;}
+.tablaa {
+	
+            width:380px;
+            border-collapse: collapse;
+            margin: 20px auto;
+			background-color:white;
+        }
+        th, td {
+            border: 1px solid CadetBlue;
+            padding: 10px;
+            
+        }
+		
+
+button{background-color:white;
+  border:solid 3px black;
+  color:white;
+  padding:15px 32px;
+  text-align:center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:left;
+border-radius: 10px;}
+
+footer{background-color:black;
+        border-radius:5px;
+        color:white;
+		clear:both;
+		text-align:center;
+		padding:5px;
+		font-size: 24px;
+		}
+		
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centrar el modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 400px; /* Ancho fijo del modal */
+	height:450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Ancho del input */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+
+
+/*este boton es para liga pro*/
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(255, 171, 157, 0.5);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #ffab9d;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
+
+
+/*este boton es para champions*/
+
+.cte {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cte:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(0, 68, 249, 0.9);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cte span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cte svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cte:hover:before {
+  width: 100%;
+  background: #fc30c5;
+}
+.cte:hover svg {
+  transform: translateX(0);
+}
+.cte:active {
+  transform: scale(0.96);
+}
+
+

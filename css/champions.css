@@ -1,0 +1,331 @@
+ 
+
+    /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:white;
+            color: #333;
+        }
+
+ 
+
+
+.hero {
+    position: relative;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 27%;
+    right: 50%;
+    transform: translateY(-40%);
+    text-align: left;
+	opacity: 0; /* Inicialmente invisible */
+    transform: translateY(100%); /* Empieza desde abajo */
+    animation: aparecer 1.5s forwards; /* Aplica la animación */
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin-left:80px;
+	animation-delay: 0.5s; /* Aparece primero */
+}
+
+.hero-text p {
+    margin: 10px;
+	font-size:24px;
+	margin-left:130px;
+	 animation-delay: 1.9s; /* Aparece después */
+}
+
+.hero-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a3d26;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+	margin-left:130px;
+	animation-delay: 1.5s; /* Aparece último */
+}
+
+/* Animación para el efecto de aparición */
+        @keyframes aparecer {
+            to {
+                opacity: 1; /* Hace visible el elemento */
+                transform: translateY(0); /* Lo mueve a su posición original */
+            }
+        }
+
+
+
+
+/* Puedes ajustar el filtro de color según el color que desees para cada icono */
+
+
+
+/*iniciamos carrusel*/
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+button.prev, button.next {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px; /* Ajusta según tu diseño */
+    width: 100%;
+    gap: 10px;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2); /* Fondo de la barra */
+    height: 5px;
+    flex: 1; /* Barras del mismo tamaño */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    background:#A2E4B8; /* Color que se llena */
+    height: 100%;
+    width: 0; /* Inicialmente vacía */
+    transition: width linear; /* Anima el ancho */
+}
+
+
+
+
+
+/*esto para las camisetas mas vendidas*/
+
+h2 {text-align: center;
+    color: black;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el tamaño de las columnas */
+            gap: 15px; /* Espacio entre las imágenes */
+            padding: 20px;
+        }
+        .grid-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .grid-item p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+
+
+/* Estilos generales */
+.footer {
+    background-color: #0a192f; /* Azul marino oscuro */
+    color: #ffffff;
+    padding: 80px 0 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo img {
+    width: 180px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccd6f6; /* Gris claro azulado */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ccd6f6;
+    font-size: 1.4rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #64ffda; /* Verde turquesa */
+    transform: translateY(-5px);
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #64ffda; /* Verde turquesa */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 15px;
+}
+
+.footer-links a, .footer-contact li {
+    color: #ccd6f6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #64ffda;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.footer-contact i {
+    color: #64ffda;
+}
+
+.footer-newsletter-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: #112240; /* Azul más claro */
+    color: #ccd6f6;
+}
+
+.newsletter-form button {
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #52d1b2; /* Verde turquesa más oscuro */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(17, 34, 64, 0.5); /* Azul más claro con transparencia */
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #ccd6f6;
+}

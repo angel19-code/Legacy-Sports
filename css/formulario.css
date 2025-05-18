@@ -1,0 +1,210 @@
+ /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Botón Comprar */
+        .boton-comprar {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .boton-comprar:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Modal */
+        .modal-fondo {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-contenido {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .cerrar-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+            transition: all 0.2s;
+        }
+
+        .cerrar-modal:hover {
+            color: #333;
+            transform: rotate(90deg);
+        }
+
+        /* Formulario */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+            outline: none;
+        }
+
+        /* Métodos de pago */
+        .metodo-pago {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f9f9f9;
+        }
+
+        .metodo-pago:hover {
+            border-color: #4CAF50;
+            background: #f0f0f0;
+        }
+
+        .metodo-pago input {
+            margin-right: 15px;
+        }
+
+        .metodo-pago .icono-pago {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+
+        .metodo-pago .info-pago {
+            flex: 1;
+        }
+
+        .metodo-pago .titulo-pago {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .metodo-pago .desc-pago {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Secciones de pago dinámicas */
+        .seccion-pago {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            animation: slideDown 0.3s;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .seccion-pago.active {
+            display: block;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .flex-row .form-group {
+            flex: 1;
+        }
+
+        /* Tarjetas */
+        .tarjeta-preview {
+            height: 40px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tarjeta-icono {
+            height: 100%;
+            margin-right: 10px;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+        }
+
+        /* Botón de enviar */
+        .btn-enviar {
+            background: #2196F3;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-enviar:hover {
+            background: #0b7dda;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }

@@ -1,0 +1,56 @@
+/* Estilos generales */
+    body {
+     
+	height: 100vh;}
+     
+
+    /* Contenedor principal */
+    .countdown {
+      text-align: center;
+      background-color:black;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      width: 250px;
+	  color: white;
+    }
+
+    /* Texto "Próximas camisetas en:" */
+    .countdown h2 {
+      font-size: 1rem;
+      margin: 0 0 8px 0;
+      text-transform: uppercase;
+    }
+
+    /* Contenedor del temporizador */
+    .timer {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Cajas de tiempo (horas, minutos, segundos) */
+    .time-box {
+      background-color:black;
+      padding: 5px;
+      border-radius: 5px;
+      flex: 1;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Números (horas, minutos, segundos) */
+    .time-box span {
+      font-size: 1.9rem;
+      font-weight: bold;
+      display: block;
+      background: blue;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Etiquetas (Hrs, Min, Seg) */
+    .time-box p {
+      margin: 2px 0 0;
+      font-size: 1rem;
+      color: white;
+      /*text-transform: uppercase; esta etiqueta comvierte a mayusculas*/
+    }

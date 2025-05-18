@@ -1,0 +1,451 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Tienda</title>
+<link rel="stylesheet" href="css/menu.css">
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+  <nav>
+  <div class="wrapper">
+    <div class="contenedor2">
+        <a href="index.html"><img src="images/logo2.png" alt="Descripción de la imagen" class="image"></a>
+        <div class="texto13">LEGACY SPORTS</div>
+    </div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li><a href="index.html">Casa</a></li>
+      <li><a href="shop.html">Tienda</a></li>
+      <li>
+        <a href="#" class="desktop-item">Equipos</a>
+        <input type="checkbox" id="showDrop">
+        <label for="showDrop" class="mobile-item">Equipos</label>
+        <ul class="drop-menu">
+          <li><a href="liga pro.html">Liga Pro</a></li>
+          <li><a href="champions.html">Champions League</a></li>
+          <li><a href="retro.html">Retro | Especiales</a></li>
+        </ul>
+      </li>
+     
+      <li><a href="experiance.html">Fotos del Producto</a></li>
+	  <li><a href="contact.html">Contacto</a></li>
+	  
+	   <li>
+        <a href="#" class="desktop-item">Mas +</a>
+        <input type="checkbox" id="showMega">
+        <label for="showMega" class="mobile-item">Mas +</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="images/tarjetas.jpeg" alt="tarjetas">
+            </div>
+            <div class="row">
+              <header>Patrocinadores</header>
+              <ul class="mega-links">
+                <li><a href="#">Legacy Sports</a></li>
+                <li><a href="#">Adidas</a></li>
+                <li><a href="#">Marathon</a></li>
+                <li><a href="#">Puma</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Forma de entregas</header>
+              <ul class="mega-links">
+                <li><a href="#">Servi-Entrega</a></li>
+                <li><a href="#">Punto de entrega</a></li>
+                <li><a href="#">Entrega Internacional</a></li>
+                <li><a href="#">Estandar</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Metodos de pago</header>
+              <ul class="mega-links">
+                <li><a href="#">Tranferencia</a></li>
+                <li><a href="#">Deposito</a></li>
+                <li><a href="#">Efectivo</a></li>
+                <li><a href="#">Paypal</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+
+
+	<BR>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row shop_box-top">
+			<div class="masvendidos">Lo más vendido</div>
+			<br>
+			     <div class="titulo">
+                     <h2>Internacionales</h2>
+					 </div>
+		
+				<div class="col-md-3 shop_box"><a href="championsleague/barca.html">
+					<img src="images/barca2.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="championsleague/barca.html">F.C.BARCELONA</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="reducedfrom">$85.00</span>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="championsleague/barca.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				
+				<div class="col-md-3 shop_box"><a href="championsleague/realmadrid.html">
+					<img src="images/real2.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="championsleague/realmadrid.html">Real Madrid</a></h3>
+                        <p>Camiseta recien agregada "oficiales" </p>						
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="championsleague/realmadrid.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="championsleague/bayer.html">
+					<img src="images/bayer3.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="championsleague/bayer.html">Bayern Múnich</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="reducedfrom">$85.00</span>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="championsleague/bayer.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="championsleague/psg.html">
+					<img src="images/psg2.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="championsleague/psg.html">P.S.G</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="reducedfrom">$85.00</span>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="championsleague/psg.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+			</div>
+			
+			<div class="titulo">
+                     <h2>Nacionales</h2>
+					 </div>
+			
+			<div class="row">
+				<div class="col-md-3 shop_box"><a href="ligapro/barcelona.html">
+					<img src="images/barcelona.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="ligapro/barcelona.html">Barcelona S.C</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="ligapro/barcelona.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="ligapro/emelec.html">
+					<img src="images/emelec.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="ligapro/emelec.html">C.S.Emelec</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="ligapro/emelec.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="ligapro/idv.html">
+					<img src="images/idv.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="ligapro/idv.html">Independiente del valle</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="reducedfrom">$85.00</span>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="ligapro/idv.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="ligapro/aucas.html">
+					<img src="images/aucas1.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="ligapro/aucas.html">Aucas</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="reducedfrom">$85.00</span>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="ligapro/aucas.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				
+				
+				<!--retros-->
+				<br><br>
+				<div class="titulo">
+                     <h2>Retros</h2>
+					 </div>
+			<br><br>
+				
+			<div class="row">
+				<div class="col-md-3 shop_box"><a href="retros/brasil34.html">
+					<img src="images/retrobrasil2.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="retros/brasil34.html">Brasil 2003/2004</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="retros/brasil34.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="retros/argen86.html">
+					<img src="images/retroargen3.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="retros/argen86.html">Argentina 1986</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="retros/argen86.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="retros/real78.html">
+					<img src="images/retroreal3.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="retros/real78.html">Real Madrid 2017/2018</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="retros/real78.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				<div class="col-md-3 shop_box"><a href="retros/barca56.html">
+					<img src="images/retrobarca4.jpg" class="img-responsive" alt=""/>
+					<span class="new-box">
+						<span class="new-label">New</span>
+					</span>
+					<span class="sale-box">
+						<span class="sale-label">Sale!</span>
+					</span>
+					<div class="shop_desc">
+						<h3><a href="retros/barca56.html">Barca 2005/2006</a></h3>
+						<p>Camiseta recien agregada "oficiales" </p>
+						<span class="actual">$65.00</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Añadir al carrito</a></li>
+							<li class="shop_btn"><a href="retros/barca56.html">Comprar</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</a></div>
+				
+				
+			</div>
+		 </div>
+	   </div>
+	  </div>
+	  <footer class="footer">
+    <div class="footer-container">
+        <!-- Sección 1: Logo y descripción -->
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="images/logopri2.png" alt="Logo de la empresa">
+            </div>
+            <p class="footer-description">
+                Somos tu tienda oficial de camisetas de fútbol. Compra !ahora!.
+            </p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Sección 2: Enlaces útiles -->
+        <div class="footer-column">
+            <h3 class="footer-title">Explorar</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="shop.html">tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="experiance.html">Fotos del Producto</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección 3: Contacto -->
+        <div class="footer-column">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt"></i> Av.Rocio Rivadeneira, Macas, Ecuador</li>
+                <li><i class="fas fa-phone"></i> +593 99 428 6637</li>
+                <li><i class="fas fa-envelope"></i> LegacySports.com</li>
+            </ul>
+        </div>
+
+        <!-- Sección 4: Newsletter -->
+        <div class="footer-column">
+            <h3 class="footer-title">Suscríbete</h3>
+            <p class="footer-newsletter-text">
+                Recibe las últimas actualizaciones y noticias directamente en tu bandeja de entrada.
+            </p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Línea inferior con derechos de autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Legacy Sports. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>	
+</html>

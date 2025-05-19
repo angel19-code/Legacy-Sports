@@ -1,0 +1,527 @@
+<!Doctype html><!--para indicarle al navegador que estamos codificando con html-->
+<html lang="es">
+<head><!--incio del fichrero-->
+<title>independiente del valle</title> <!--sirve para poner el titulo a la pagina-->
+<meta charset="utf-8"/> <!--para que no salgan simbolos estraños-->
+<link rel="stylesheet" href="../css/estilopro.css">
+<link rel="stylesheet" href="../css/formulario.css">
+<link rel="stylesheet" href="../css/menu.css">
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" media="all" href="../css/practica.css" />				
+</head>
+<body>
+
+<nav>
+  <div class="wrapper">
+    <div class="contenedor2">
+        <a href="../index.html"><img src="../images/logo2.png" alt="Descripción de la imagen" class="image"></a>
+        <div class="texto13">LEGACY SPORTS</div>
+    </div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li><a href="../index.html">Casa</a></li>
+      <li><a href="../shop.html">Tienda</a></li>
+      <li>
+        <a href="#" class="desktop-item">Equipos</a>
+        <input type="checkbox" id="showDrop">
+        <label for="showDrop" class="mobile-item">Equipos</label>
+        <ul class="drop-menu">
+          <li><a href="../liga pro.html">Liga Pro</a></li>
+          <li><a href="../champions.html">Champions League</a></li>
+          <li><a href="../retro.html">Retro</a></li>
+        </ul>
+      </li>
+     
+      <li><a href="../experiance.html">Fotos del Producto</a></li>
+	  <li><a href="../contact.html">Contacto</a></li>
+	  
+	   <li>
+        <a href="#" class="desktop-item">Mas +</a>
+        <input type="checkbox" id="showMega">
+        <label for="showMega" class="mobile-item">Mas +</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="../images/tarjetas.jpeg" alt="tarjetas">
+            </div>
+            <div class="row">
+              <header>Patrocinadores</header>
+              <ul class="mega-links">
+                <li><a href="../index.html">Legacy Sports</a></li>
+                <li><a href="#">Adidas</a></li>
+                <li><a href="#">Marathon</a></li>
+                <li><a href="#">Puma</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Forma de entregas</header>
+              <ul class="mega-links">
+                <li><a href="#">Servi-Entrega</a></li>
+                <li><a href="#">Punto de entrega</a></li>
+                <li><a href="#">Entrega Internacional</a></li>
+                <li><a href="#">Estandar</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header>Metodos de pago</header>
+              <ul class="mega-links">
+                <li><a href="#">Tranferencia</a></li>
+                <li><a href="#">Deposito</a></li>
+                <li><a href="#">Efectivo</a></li>
+                <li><a href="#">Paypal</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+
+
+
+
+	
+	<br><br><br><br><br>
+
+
+
+<section>
+  
+<div class="description" id="imageDescription">Independiente del valle  azul/negra</div> <!-- Texto descriptivo -->
+    <img id="largeImage" class="large-image" src="../images/idv.jpg" alt="Imagen Grande">
+
+    <div>
+        <img class="thumbnail2" src="../images/idv.jpg" alt="Imagen 1" onclick="changeImage('../images/idv.jpg','Independiente del valle  azul/negra')">
+        <img class="thumbnail2" src="../images/idv3.jpg" alt="Imagen 2" onclick="changeImage('../images/idv3.jpg','Independiente del valle  blanca/plomo')">
+        <img class="thumbnail2" src="../images/idv2.jpg" alt="Imagen 3" onclick="changeImage('../images/idv2.jpg','Independiente del valle  rosada')">
+
+    </div>
+
+    <script>
+        function changeImage(imageSrc, description) {
+            document.getElementById('largeImage').src = imageSrc;
+            document.getElementById('imageDescription').innerText = description; // Cambia el texto
+        }
+    </script>
+
+  
+</section>
+
+<div class="medio">
+
+    <div class="nombredelequipo">
+        <img src="../images/idvlogo.png" alt="Descripción de la imagen" class="image">
+        <div class="texto14">Independiente del Valle</div>
+	</div>
+
+<div class="product-details2">
+    <div class="price">Precio: <span id="precio-unitario">65.00</span> $</div>
+    <div class="tallas">Tallas</div>
+    <div class="size-select">
+      <select id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="x-large">X-Large</option>
+        <option value="xx-large">XX-large</option>
+      </select>
+    </div>
+    <div class="quantity">Cantidad</div>
+    <div class="quantity-select">
+      <input type="number" id="quantity" value="1" min="1" onchange="calcularTotal()">
+    </div>
+    <div class="total">Total a pagar: <span id="total">65.00</span> $</div>
+	<br>
+	
+	<button id="btnComprar" class="boton-comprar">Comprar Ahora</button>
+	
+<!-- Modal con formulario -->
+    <div id="modalCompra" class="modal-fondo">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 style="margin-top: 0; color: #4CAF50;">Finalizar Compra</h2>
+            
+            <form id="formDatos">
+                <h3>Datos de Envío</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo*</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                
+                <div class="flex-row">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="direccion">Dirección completa*</label>
+                    <textarea id="direccion" required></textarea>
+                </div>
+
+                <h3>Método de Pago</h3>
+                
+                <!-- Tarjeta de crédito -->
+                <label class="metodo-pago" for="pago-tarjeta">
+                    <input type="radio" id="pago-tarjeta" name="metodo-pago" value="tarjeta" checked>
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" class="icono-pago" alt="Tarjeta">
+                    <div class="info-pago">
+                        <div class="titulo-pago">Tarjeta de crédito/débito</div>
+                        <div class="desc-pago">Visa, Mastercard, American Express</div>
+                    </div>
+                </label>
+                
+                <div id="seccion-tarjeta" class="seccion-pago active">
+                    <div class="form-group">
+                        <label for="numero-tarjeta">Número de tarjeta*</label>
+                        <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" required>
+                        <div class="tarjeta-preview" id="tarjeta-preview">
+                            <!-- Icono de tarjeta dinámico -->
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="form-group">
+                            <label for="fecha-expiracion">Fecha expiración*</label>
+                            <input type="text" id="fecha-expiracion" placeholder="MM/AA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV*</label>
+                            <input type="password" id="cvv" placeholder="•••" required maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-tarjeta">Nombre en la tarjeta*</label>
+                        <input type="text" id="nombre-tarjeta" required>
+                    </div>
+                </div>
+                
+                <!-- PayPal -->
+                <label class="metodo-pago" for="pago-paypal">
+                    <input type="radio" id="pago-paypal" name="metodo-pago" value="paypal">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504801.png" class="icono-pago" alt="PayPal">
+                    <div class="info-pago">
+                        <div class="titulo-pago">PayPal</div>
+                        <div class="desc-pago">Paga rápido con tu cuenta PayPal</div>
+                    </div>
+                </label>
+                
+                <div id="seccion-paypal" class="seccion-pago">
+                    <div class="form-group">
+                        <label for="email-paypal">Correo de PayPal*</label>
+                        <input type="email" id="email-paypal">
+                    </div>
+                    <div class="form-group">
+                        <label for="password-paypal">Contraseña*</label>
+                        <input type="password" id="password-paypal">
+                    </div>
+                    <p style="font-size: 13px; color: #666;">Serás redirigido a PayPal para confirmar el pago</p>
+                </div>
+                
+                <!-- Transferencia bancaria -->
+                <label class="metodo-pago" for="pago-transferencia">
+                    <input type="radio" id="pago-transferencia" name="metodo-pago" value="transferencia">
+                    <img src="https://cdn-icons-png.flaticon.com/512/477/477103.png" class="icono-pago" alt="Transferencia">
+                    <div class="info-pago">
+                        <div class="titulo-pago">Transferencia bancaria</div>
+                        <div class="desc-pago">Paga directamente desde tu banco</div>
+                    </div>
+                </label>
+                
+                <div id="seccion-transferencia" class="seccion-pago">
+                    <p>Te enviaremos los datos bancarios al correo electrónico proporcionado.</p>
+                    <p style="font-size: 13px; color: #666;">Por favor, incluye el número de pedido como concepto.</p>
+                    <div class="form-group">
+                        <label for="banco">Banco preferido</label>
+                        <select id="banco">
+                            <option>Selecciona tu banco</option>
+                            <option>Banco Pichincha</option>
+                            <option>Banco Guayaquil</option>
+                            <option>Banco del Pacífico</option>
+                            <option>Banco Produbanco</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Realizar Pago</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Abrir modal
+        document.getElementById('btnComprar').addEventListener('click', function() {
+            document.getElementById('modalCompra').style.display = 'flex';
+        });
+
+        // Cerrar modal
+        document.querySelector('.cerrar-modal').addEventListener('click', function() {
+            document.getElementById('modalCompra').style.display = 'none';
+        });
+
+        // Cerrar al hacer clic fuera
+        document.getElementById('modalCompra').addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.getElementById('modalCompra').style.display = 'none';
+            }
+        });
+
+        // Cambiar entre métodos de pago
+        const metodosPago = document.querySelectorAll('input[name="metodo-pago"]');
+        
+        metodosPago.forEach(metodo => {
+            metodo.addEventListener('change', function() {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.seccion-pago').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+                
+                // Mostrar la sección correspondiente
+                const seccionId = 'seccion-' + this.value;
+                document.getElementById(seccionId).classList.add('active');
+            });
+        });
+
+        // Detección de tipo de tarjeta
+        document.getElementById('numero-tarjeta').addEventListener('input', function(e) {
+            // Formatear número (espacios cada 4 dígitos)
+            this.value = this.value.replace(/\D/g, '')
+                                 .replace(/(\d{4})(?=\d)/g, '$1 ')
+                                 .substring(0, 19);
+            
+            // Detectar tipo de tarjeta
+            const tarjetaPreview = document.getElementById('tarjeta-preview');
+            const numero = this.value.replace(/\s/g, '');
+            let tipoTarjeta = 'generic';
+            
+            if (/^4/.test(numero)) {
+                tipoTarjeta = 'visa';
+            } else if (/^5[1-5]/.test(numero)) {
+                tipoTarjeta = 'mastercard';
+            } else if (/^3[47]/.test(numero)) {
+                tipoTarjeta = 'amex';
+            }
+            
+            // Mostrar icono correspondiente
+            tarjetaPreview.innerHTML = '';
+            if (numero.length > 0) {
+                const img = document.createElement('img');
+                img.src = `https://cdn-icons-png.flaticon.com/512/196/196578.png`; // Icono genérico
+                
+                if (tipoTarjeta === 'visa') {
+                    img.src = `https://cdn-icons-png.flaticon.com/512/196/196578.png`;
+                } else if (tipoTarjeta === 'mastercard') {
+                    img.src = `https://cdn-icons-png.flaticon.com/512/196/196566.png`;
+                } else if (tipoTarjeta === 'amex') {
+                    img.src = `https://cdn-icons-png.flaticon.com/512/196/196561.png`;
+                }
+                
+                img.className = 'tarjeta-icono';
+                img.alt = 'Tipo de tarjeta';
+                tarjetaPreview.appendChild(img);
+            }
+        });
+
+        // Formatear fecha de expiración
+        document.getElementById('fecha-expiracion').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '')
+                                 .replace(/(\d{2})(?=\d)/g, '$1/')
+                                 .substring(0, 5);
+        });
+
+        // Validar CVV
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').substring(0, 4);
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('formDatos').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const metodoPago = document.querySelector('input[name="metodo-pago"]:checked').value;
+            let mensaje = `¡Pedido confirmado!\n\n`;
+            
+            if (metodoPago === 'tarjeta') {
+                const tarjeta = document.getElementById('numero-tarjeta').value;
+                mensaje += `Pago procesado con tarjeta terminada en ${tarjeta.slice(-4)}\n`;
+                mensaje += `Te enviaremos los detalles a ${document.getElementById('email').value}`;
+            } else if (metodoPago === 'paypal') {
+                mensaje += `Serás redirigido a PayPal para completar el pago\n`;
+                mensaje += `Correo: ${document.getElementById('email-paypal').value || document.getElementById('email').value}`;
+            } else {
+                mensaje += `Te enviaremos los datos bancarios para la transferencia\n`;
+                mensaje += `Banco seleccionado: ${document.getElementById('banco').value || 'No especificado'}`;
+            }
+            
+            // Mostrar resumen
+            alert(mensaje);
+            
+            // Simular procesamiento
+            document.querySelector('.btn-enviar').textContent = 'Procesando...';
+            document.querySelector('.btn-enviar').disabled = true;
+            
+            setTimeout(() => {
+                document.getElementById('modalCompra').style.display = 'none';
+                document.querySelector('.btn-enviar').textContent = 'Realizar Pago';
+                document.querySelector('.btn-enviar').disabled = false;
+                
+                // Aquí iría el código real para enviar los datos al servidor
+                console.log('Datos enviados:', {
+                    nombre: document.getElementById('nombre').value,
+                    email: document.getElementById('email').value,
+                    metodoPago: metodoPago,
+                    detalles: metodoPago === 'tarjeta' ? {
+                        tarjeta: document.getElementById('numero-tarjeta').value.replace(/\s/g, '').slice(-4),
+                        nombreTarjeta: document.getElementById('nombre-tarjeta').value
+                    } : null
+                });
+            }, 1500);
+        });
+    </script>
+	
+</div>
+
+<script>
+    const precioUnitario = 65.00; // Precio por camiseta
+
+    function calcularTotal() {
+        const cantidad = document.getElementById("quantity").value;
+        const total = (cantidad * precioUnitario).toFixed(2); // Calcular total y formatear a 2 decimales
+        document.getElementById("total").innerText = total; // Actualizar el total en la página
+    }
+
+    // Inicializar el total al cargar la página
+    calcularTotal();
+</script>
+<br>
+<div class="tabla2">
+<h3>Personalización</h3>
+<table class="tablaa">
+        <tr>
+            <th>Personalización</th>
+            <th>Costo</th>
+        </tr>
+        <tr>
+            <td>nombre</td>
+            <td>15.00$</td>
+        </tr>
+        <tr>
+            <td>un numero</td>
+            <td>7.00$</td>
+        </tr>
+        <tr>
+            <td>dos numeros</td>
+            <td>10.00$</td>
+        </tr>
+    </table>
+	
+<a href="#" class="cta" id="openModal">
+<span>Personalizar</span>
+<svg width="13px" height="10px" viewBox="0 0 13 10">
+<path d="M1,5 L11,5"></path>
+<polyline points="8 1 12 5 8 9"></polyline>
+</svg>
+</a>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Personaliza tu camiseta</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" maxlength="20"><br>
+
+            <label for="numero1">1 Número:</label>
+            <input type="text" id="numero1" placeholder="Ingresa el primer número" maxlength="1"><br>
+
+            <label for="numero2">2 Números:</label>
+            <input type="text" id="numero2" placeholder="Ingresa el segundo número" maxlength="2"><br>
+
+			<button  id="comprar" class="pulse">Guardar Cambios</button>
+        </div>
+    </div>
+
+    <script src="../java/java1.js"></script> <!-- Enlaza tu archivo JavaScript aquí -->
+
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Sección 1: Logo y descripción -->
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="../images/logopri2.png" alt="Logo de la empresa">
+            </div>
+            <p class="footer-description">
+                Somos tu tienda oficial de camisetas de fútbol. Compra !ahora!.
+            </p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Sección 2: Enlaces útiles -->
+        <div class="footer-column">
+            <h3 class="footer-title">Explorar</h3>
+            <ul class="footer-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../shop.html">tienda</a></li>
+                <li><a href="../contact.html">Contacto</a></li>
+                <li><a href="../experiance.html">Fotos del Producto</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección 3: Contacto -->
+        <div class="footer-column">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt"></i> Av.Rocio Rivadeneira, Macas, Ecuador</li>
+                <li><i class="fas fa-phone"></i> +593 99 428 6637</li>
+                <li><i class="fas fa-envelope"></i> LegacySports.com</li>
+            </ul>
+        </div>
+
+        <!-- Sección 4: Newsletter -->
+        <div class="footer-column">
+            <h3 class="footer-title">Suscríbete</h3>
+            <p class="footer-newsletter-text">
+                Recibe las últimas actualizaciones y noticias directamente en tu bandeja de entrada.
+            </p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Línea inferior con derechos de autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Legacy Sports. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
